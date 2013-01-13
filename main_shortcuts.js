@@ -66,7 +66,7 @@ $(document).ready(function () {
       }
 
       //open link in same window
-      else if (key == "n".charCodeAt(0)  ){
+      else if (key == "n".charCodeAt(0) || key=="13"){
         var link = current.next().next().children('a').attr('href');
         open_link(link);
       }
@@ -78,7 +78,7 @@ $(document).ready(function () {
       }
 
       //open comments in same window
-      else if (key == "c".charCodeAt(0)  ){
+      else if (key == "c".charCodeAt(0)){
         var link = current.parent().next().children('td.subtext').children('a:last').attr('href');
         open_link(link);
       }

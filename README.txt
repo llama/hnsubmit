@@ -27,5 +27,4 @@ Reply:
 
 //TODO:
 fix shortcuts for poll pages
-make enter also open page
 add instapaper support
