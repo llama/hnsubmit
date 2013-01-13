@@ -66,13 +66,13 @@ $(document).ready(function () {
       }
 
       //open link in same window
-      else if (key == "n".charCodeAt(0) || key=="13"){
+      else if (key == "o".charCodeAt(0) || key=="13"){
         var link = current.next().next().children('a').attr('href');
         open_link(link);
       }
 
       //open link in new tab
-      else if (key == "N".charCodeAt(0) ){
+      else if (key == "O".charCodeAt(0) ){
         var link = current.next().next().children('a').attr('href');
         open_link_new_tab(link);
       }
@@ -113,7 +113,7 @@ $(document).ready(function () {
           {"url":link, // Need to escape?
           "title":title,
           "tags":"HN",
-          "consumer_key":"1234-abcd1234abcd1234abcd1234",
+          "consumer_key":POCKET_CONSUMER_KEY,
           "access_token":"5678defg-5678-defg-5678-defg56"},
           function(data){
             console.log(data); // John

@@ -24,6 +24,7 @@
     }
   ],
   "permissions": [
-    "*://news.ycombinator.com/"
+    "*://news.ycombinator.com/",
+    "*://getpocket.com/"
   ]
 }
