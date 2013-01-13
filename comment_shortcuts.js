@@ -49,7 +49,7 @@ $(document).ready(function () {
       //reply
       else if (key == "r".charCodeAt(0)){
         var link = current.find('td.default').find('u').children('a').attr('href');
-        open_link("http://news.ycombinator.com/" + link);
+        open_link(link);
       }
 
       //upvote
@@ -103,7 +103,7 @@ $(document).ready(function () {
 
   //opens the link currently selected in same window
   function open_link(link) {
-    window.location.href = link;
+    document.location.href = link;
   }
 
   //opens the link currently selected in new tab

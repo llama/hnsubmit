@@ -124,10 +124,8 @@ $(document).ready(function () {
 
       //next page
       else if (key == "m".charCodeAt(0) ){
-
         var link = $('a:contains("More"):last').attr('href');
-        open_link("http://news.ycombinator.com" + link);
-      
+        open_link(link);
       }
     }
 
@@ -137,8 +135,8 @@ $(document).ready(function () {
   function scroll(current){
 
     //scroll down if element goes below window
-    var drop = current.height() + current.next().height() + current.next().next().height();   
-    if (current.offset().top + drop > $(window).scrollTop() + window.innerHeight){       
+    var drop = current.height() + current.next().height() + current.next().next().height();
+    if (current.offset().top + drop > $(window).scrollTop() + window.innerHeight){
       $('body').animate({
         scrollTop: current.offset().top - window.innerHeight + drop
       }, 0);
@@ -146,7 +144,7 @@ $(document).ready(function () {
 
     //scroll up if element goes above window
     else if (current.offset().top < $(window).scrollTop()){
-      //var drop = current.height() + current.next().height() + current.next().next().height();          
+      //var drop = current.height() + current.next().height() + current.next().next().height();         
       $('body').animate({
         scrollTop: current.offset().top
       }, 0);
@@ -167,7 +165,7 @@ $(document).ready(function () {
 
   //opens the link currently selector in same window
   function open_link(link) {
-    window.location.href = link;
+    document.location.href = link;
   }
 
   //opens the link currently selected in new tab

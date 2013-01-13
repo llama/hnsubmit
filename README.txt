@@ -28,5 +28,4 @@ Reply:
 //TODO:
 fix shortcuts for poll pages
 make enter also open page
-make opened links respect current scheme (i.e. HTTP vs HTTPS)
 add instapaper support
