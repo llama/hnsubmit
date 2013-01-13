@@ -99,6 +99,29 @@ $(document).ready(function () {
         current.next().children('center').children('a[id^=down]:first').click();
       }
 
+      // add to pocket
+      else if (key == "p".charCodeAt(0) ){
+        var POCKET_CONSUMER_KEY = "11476-982a9496933a2d06880c143e";
+        var POCKET_ADD_URL = "https://getpocket.com/v3/add";
+        var link = current.next().next().children('a').attr('href');
+        var title = current.next().next().children('a').text();
+
+
+        // TODO auth with pocket and persist http://getpocket.com/developer/docs/authentication
+        // http://api.jquery.com/jQuery.post/
+        $.post(POCKET_ADD_URL, 
+          {"url":link, // Need to escape?
+          "title":title,
+          "tags":"HN",
+          "consumer_key":"1234-abcd1234abcd1234abcd1234",
+          "access_token":"5678defg-5678-defg-5678-defg56"},
+          function(data){
+            console.log(data); // John
+          }, "json");
+        // TODO  visual cue that it's in pocket
+        // TODO elsewhere, check if link in pocket and show visual cue
+      }
+
       //next page
       else if (key == "m".charCodeAt(0) ){
 
